@@ -1,7 +1,6 @@
 FROM jupyter/base-notebook
-USER root
-WORKDIR /root
 LABEL maintainer="Naoya Ikeda <n_ikeda@hotmail.com>"
+USER root
 RUN echo "now building..." && \
     conda install python=3.7 matplotlib seaborn numpy scipy=1.1.0 && \
     apt update && \
